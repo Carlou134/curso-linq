@@ -39,4 +39,14 @@ public class LinqQueries
                where l.PageCount > 250 && l.Title.Contains("in Action")
                select l;
     }
+
+    public bool TodosLosLibrosTienenStatus()
+    {
+        return librosCollection.All(x => x.Status != String.Empty);
+    }
+
+    public bool SiPublicadoEn2005()
+    {
+        return librosCollection.Any(x => x.PublishedDate.Year == 2005);
+    }
 }
