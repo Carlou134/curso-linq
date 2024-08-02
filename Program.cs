@@ -22,7 +22,13 @@
 // PrintValues(queries.LibrosDeJavaOrdernadoPorNombre());
 
 //Libros que tienen mas de 450 pags ordenados por numero de paginas
-PrintValues(queries.LibrosDeMasDe450PagsDescendentes());
+// PrintValues(queries.LibrosDeMasDe450PagsDescendentes());
+
+//3 primeros libros de Java
+// PrintValues(queries.TresPrimerosLibrosJavaOrdenadosPorFecha());
+
+//Tercer y Cuarto Libro con mas de 400 paginas
+PrintValues(queries.TercerYCuartoLibroConMas400Pags());
 
 
 void PrintValues(IEnumerable<Book> listLibros)

@@ -1,3 +1,4 @@
+using System.IO.Compression;
 using System.Security.Cryptography.X509Certificates;
 
 public class LinqQueries
@@ -63,5 +64,19 @@ public class LinqQueries
     public IEnumerable<Book> LibrosDeMasDe450PagsDescendentes()
     {
         return librosCollection.Where(x => x.PageCount > 450).OrderByDescending(x => x.PageCount);
+    }
+
+    public IEnumerable<Book> TresPrimerosLibrosJavaOrdenadosPorFecha()
+    {
+        return librosCollection.Where(x => x.Categories.Contains("Java"))
+        .OrderBy(x => x.PublishedDate)
+        .TakeLast(3);
+    }
+
+    public IEnumerable<Book> TercerYCuartoLibroConMas400Pags()
+    {
+        return librosCollection.Where(x => x.PageCount > 400)
+        .Take(4)
+        .Skip(2);
     }
 }
