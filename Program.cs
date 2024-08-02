@@ -13,7 +13,17 @@
 // Console.WriteLine($"Todos los libros tienen status - {queries.TodosLosLibrosTienenStatus()}");
 
 //Algun libro fue publciado en 2005
-Console.WriteLine($"Algun libro fue publicado en 2005 - {queries.SiPublicadoEn2005()}");
+// Console.WriteLine($"Algun libro fue publicado en 2005 - {queries.SiPublicadoEn2005()}");
+
+//Libros de python
+// PrintValues(queries.LibrosDePython());
+
+//Libros de Java
+// PrintValues(queries.LibrosDeJavaOrdernadoPorNombre());
+
+//Libros que tienen mas de 450 pags ordenados por numero de paginas
+PrintValues(queries.LibrosDeMasDe450PagsDescendentes());
+
 
 void PrintValues(IEnumerable<Book> listLibros)
 {

@@ -49,4 +49,19 @@ public class LinqQueries
     {
         return librosCollection.Any(x => x.PublishedDate.Year == 2005);
     }
+
+    public IEnumerable<Book> LibrosDePython()
+    {
+        return librosCollection.Where(x => x.Categories.Contains("Python"));
+    }
+
+    public IEnumerable<Book> LibrosDeJavaOrdernadoPorNombre()
+    {
+        return librosCollection.Where(x => x.Categories.Contains("Java")).OrderBy(x => x.Title);
+    }
+
+    public IEnumerable<Book> LibrosDeMasDe450PagsDescendentes()
+    {
+        return librosCollection.Where(x => x.PageCount > 450).OrderByDescending(x => x.PageCount);
+    }
 }
