@@ -31,7 +31,10 @@
 // PrintValues(queries.TercerYCuartoLibroConMas400Pags());
 
 //Tres primeros valores filtrados con select
-PrintValues(queries.TresPrimerosLibrosDeColeccion());
+// PrintValues(queries.TresPrimerosLibrosDeColeccion());
+
+//Libros con paginas entre 200 y 500
+Console.WriteLine(queries.LibrosEntre200Y500Pags());
 
 
 void PrintValues(IEnumerable<Book> listLibros)
