@@ -79,4 +79,10 @@ public class LinqQueries
         .Take(4)
         .Skip(2);
     }
+
+    public IEnumerable<Book> TresPrimerosLibrosDeColeccion()
+    {
+        return librosCollection.Take(3)
+        .Select(x => new Book {Title = x.Title, PageCount = x.PageCount});
+    }
 }
