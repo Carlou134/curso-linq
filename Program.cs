@@ -34,8 +34,22 @@
 // PrintValues(queries.TresPrimerosLibrosDeColeccion());
 
 //Libros con paginas entre 200 y 500
-Console.WriteLine(queries.LibrosEntre200Y500Pags());
+// Console.WriteLine(queries.LibrosEntre200Y500Pags());
 
+//Menor fecha de publicacion
+// Console.WriteLine(queries.FechaPublicacionMenor());
+
+//Libro con mayor numero de paginas
+// Console.WriteLine(queries.NumeroPagsMayor());
+
+//Libro con menor numero de paginas
+// var libroMenorPag = queries.LibroConMenorNumeroDePaginas();
+// Console.WriteLine($"{libroMenorPag.Title}, {libroMenorPag.PageCount}"); 
+
+
+//Libro con fecha publicacion mas reciente
+var libroFechaReciente = queries.LibroConFechaPublicacionMasReciente();
+Console.WriteLine($"{libroFechaReciente.Title}, {libroFechaReciente.PublishedDate.ToShortDateString()}"); 
 
 void PrintValues(IEnumerable<Book> listLibros)
 {
