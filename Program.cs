@@ -61,7 +61,11 @@
 // Console.WriteLine(queries.PromedioCaracteresTitulo());
 
 //Libros publicados despues del 2000
-PrintGroup(queries.LibrosPublicadosDesde2000());
+// PrintGroup(queries.LibrosPublicadosDesde2000());
+
+//Diccionario libros agrupados por primera letra
+ImprimirDiccionario(queries.DiccionarioDeLibroPorLetra(), 'A');
+
 
 void PrintValues(IEnumerable<Book> listLibros)
 {
@@ -83,5 +87,14 @@ void PrintGroup(IEnumerable<IGrouping<int, Book>> listLibros)
         {
             Console.WriteLine("{0, -60}, {1, 9}, {2, 11}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
         }
+    }
+}
+
+void ImprimirDiccionario(ILookup<char, Book> ListadoLibros, char letra)
+{
+    Console.WriteLine("{0, -60}, {1, 9}, {2, 11}\n", "Titulo", "N. Paginas", "Fecha publicacion");
+    foreach (var item in ListadoLibros[letra])
+    {
+        Console.WriteLine("{0, -60}, {1, 9}, {2, 11}", item.Title, item.PageCount, item.PublishedDate.ToShortDateString());
     }
 }
