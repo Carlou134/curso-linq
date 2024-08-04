@@ -48,8 +48,14 @@
 
 
 //Libro con fecha publicacion mas reciente
-var libroFechaReciente = queries.LibroConFechaPublicacionMasReciente();
-Console.WriteLine($"{libroFechaReciente.Title}, {libroFechaReciente.PublishedDate.ToShortDateString()}"); 
+// var libroFechaReciente = queries.LibroConFechaPublicacionMasReciente();
+// Console.WriteLine($"{libroFechaReciente.Title}, {libroFechaReciente.PublishedDate.ToShortDateString()}"); 
+
+//Suma de paginas de libros entre 0 y 500
+// Console.WriteLine(queries.SumarTodasLasPaginasDeLibrosEntre0Y500());
+
+//Libros publicados despues del 2015
+Console.WriteLine(queries.TitulosDeLibrosDespuesDel2015Concatenados());
 
 void PrintValues(IEnumerable<Book> listLibros)
 {
