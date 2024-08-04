@@ -130,4 +130,9 @@ public class LinqQueries
     {
         return librosCollection.Average(x => x.Title.Length);
     } 
+
+    public IEnumerable<IGrouping<int, Book>> LibrosPublicadosDesde2000()
+    {
+        return librosCollection.Where(x => x.PublishedDate.Year >= 2000).GroupBy(x => x.PublishedDate.Year);
+    }
 }
