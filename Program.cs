@@ -64,8 +64,11 @@
 // PrintGroup(queries.LibrosPublicadosDesde2000());
 
 //Diccionario libros agrupados por primera letra
-ImprimirDiccionario(queries.DiccionarioDeLibroPorLetra(), 'A');
+// ImprimirDiccionario(queries.DiccionarioDeLibroPorLetra(), 'A');
 
+
+//Libros filtrados con la clausula Join
+PrintValues(queries.LibrosDespuesDel2005ConMasDe500Paginas());
 
 void PrintValues(IEnumerable<Book> listLibros)
 {
